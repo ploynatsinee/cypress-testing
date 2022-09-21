@@ -12,7 +12,7 @@ describe('empty spec', () => {
     cy.get('form > button').click()
   })
   it('click add post', () => {
-    cy.get('.Nav-ul > :nth-child(2) > a').wait(2000).click()
+    cy.get('.Nav-ul > :nth-child(2) > a').wait(3500).click()
   })
   it('select sport', () => {
     cy.get('select').select('running')
@@ -22,5 +22,8 @@ describe('empty spec', () => {
   })
   it('caption', () => {
     cy.get('textarea').type('I cannot imagine living and not running.')
+  })
+  it('date input', () => {
+    cy.get('.dateInput').click()
   })
 })
