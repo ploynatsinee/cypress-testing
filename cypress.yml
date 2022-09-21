@@ -1,4 +1,5 @@
-version: 2
+version: '2'
+
 jobs:
   # test-electron:
   #   # to speed up Dockers builds turn on layer caching
@@ -36,7 +37,7 @@ jobs:
   #       no_output_timeout: 3m
 
 workflows:
-  version: 2
+  version: '2'
   build:
     jobs:
     # - test-electron
