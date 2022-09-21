@@ -20,5 +20,7 @@ describe('empty spec', () => {
   it('location', () => {
     cy.get('.locationInput').type('Bangkok')
   })
-  
+  it('caption', () => {
+    cy.get('textarea').type('I cannot imagine living and not running.')
+  })
 })
