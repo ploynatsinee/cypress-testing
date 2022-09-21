@@ -1,5 +1,5 @@
 describe('empty spec', () => {
   it('visit', () => {
-    cy.visit('https://www.google.com')
+    cy.visit('https://fitfriends.vercel.app')
   })
 })
