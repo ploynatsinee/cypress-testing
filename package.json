@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "up": "docker-compose up --abort-on-container-exit --exit-code-from e2e"
+  },
+  "keywords": [
+    "cypress",
+    "cypress-io",
+    "example",
+    "docker",
+    "docker-compose"
+  ],
+  "devDependencies": {
+    "cypress": "^10.8.0"
+  }
+}
