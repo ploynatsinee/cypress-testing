@@ -11,4 +11,9 @@ describe('empty spec', () => {
   it('click button signin', () => {
     cy.get('form > button').click()
   })
+  it('click add post', () => {
+    cy.get('.Nav-ul > :nth-child(2) > a').wait(2000).click()
+  })
+
+  
 })
