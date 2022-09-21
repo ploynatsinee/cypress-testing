@@ -17,5 +17,8 @@ describe('empty spec', () => {
   it('select sport', () => {
     cy.get('select').select('running')
   })
+  it('location', () => {
+    cy.get('.locationInput').type('Bangkok')
+  })
   
 })
