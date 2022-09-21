@@ -14,6 +14,8 @@ describe('empty spec', () => {
   it('click add post', () => {
     cy.get('.Nav-ul > :nth-child(2) > a').wait(2000).click()
   })
-
+  it('select sport', () => {
+    cy.get('select').select('running')
+  })
   
 })
