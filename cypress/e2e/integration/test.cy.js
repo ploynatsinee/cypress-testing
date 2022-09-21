@@ -8,4 +8,7 @@ describe('empty spec', () => {
   it('password input', () => {
     cy.get(':nth-child(2) > input').type('1234')
   })
+  it('click button signin', () => {
+    cy.get('form > button').click()
+  })
 })
