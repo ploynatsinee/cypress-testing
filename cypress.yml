@@ -7,7 +7,7 @@ jobs:
       docker_layer_caching: false
     steps:
     - checkout
-    - run: docker pull cypress/included:9.7.0
+    - run: docker pull cypress/included:10.8.0
     - run:
         command: docker-compose up
         no_output_timeout: 3m

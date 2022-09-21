@@ -2,11 +2,11 @@ version: '3'
 
 services:
   e2e-chrome:
-    image: "cypress/included:9.7.0"
+    image: "cypress/included:10.8.0"
     container_name: cypress
     # "cypress/included" images have entrypoint set to globally installed cypress
     # so the command can simply add any arguments
-    command: "--browser chrome"
+    command: "--browser electron"
     volumes:
       - ./cypress:/cypress
-      - ./cypress.json:/cypress.json
+      - ./cypress.config.js:/cypress.config.js
