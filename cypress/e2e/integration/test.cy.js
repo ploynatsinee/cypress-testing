@@ -15,7 +15,9 @@ describe("empty spec", () => {
     cy.get(".Nav-ul > :nth-child(2) > a").wait(7000).click();
   });
   it("select sport", () => {
-    cy.get("select").select("running");
+    cy.intercept('/addpost', (req) => {
+      cy.get("select").select("running");
+    })
   });
   it("location", () => {
     cy.get(".locationInput").type("Bangkok");
