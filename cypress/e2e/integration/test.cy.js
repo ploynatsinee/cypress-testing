@@ -31,4 +31,7 @@ describe("empty spec", () => {
   it("time start", () => {
     cy.get(":nth-child(5) > .inputTime").click().type("2022-09-22T08:30");
   });
+  it("time end", () => {
+    cy.get(":nth-child(6) > .inputTime").click().type("2022-09-22T09:55");
+  });
 });
