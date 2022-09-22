@@ -13,11 +13,11 @@ describe("empty spec", () => {
     cy.wait(7000)
   });
   it("click add post", () => {
-      cy.get(".Nav-ul > :nth-child(2) > a").wait(7000).click();
+      cy.get(".Nav-ul > :nth-child(2) > a").wait(5000).click();
   });
   
   it("select sport", () => {
-    cy.wait(7000)
+    cy.wait(5000)
     cy.get("select").select("running");
   });
   it("location", () => {
@@ -28,7 +28,9 @@ describe("empty spec", () => {
   });
   it("date input", () => {
       cy.get(".dateInput").click().type('2022-09-22')
-      cy.wait(5000)
   });
+  it("time start", () => {
+    cy.get(':nth-child(5) > .inputTime').click().type('2022-09-22T08:30')
+  })
 });
  
