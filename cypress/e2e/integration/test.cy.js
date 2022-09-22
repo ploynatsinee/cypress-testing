@@ -11,11 +11,14 @@ describe("empty spec", () => {
     cy.get(":nth-child(2) > input").type("1234");
   });
   it("click button signin", () => {
-    cy.get("form > button").click();
-    cy.wait(7000);
+    Cypress.on('uncaught:exception', (err) => {
+      cy.get("form > button").click();
+    cy.wait(9000);
+    })
+    
   });
   it("click add post", () => {
-    cy.get(".Nav-ul > :nth-child(2) > a").wait(5000).click();
+    cy.get(".Nav-ul > :nth-child(2) > a").wait(9000).click();
   });
   it("select sport", () => {
     cy.wait(5000);
@@ -46,7 +49,7 @@ describe("empty spec", () => {
       const yourFiturePath = "run";
 
       cy.get(".inputPhoto").attachFile(yourFiturePath);
-      cy.get(".saveButton").click();
+      // cy.get(".saveButton").click();
     // });
   });
 });
