@@ -10,14 +10,13 @@ describe("empty spec", () => {
   });
   it("click button signin", () => {
     cy.get("form > button").click();
-    cy.wait(7000)
+    cy.wait(7000);
   });
   it("click add post", () => {
-      cy.get(".Nav-ul > :nth-child(2) > a").wait(5000).click();
+    cy.get(".Nav-ul > :nth-child(2) > a").wait(5000).click();
   });
-  
   it("select sport", () => {
-    cy.wait(5000)
+    cy.wait(5000);
     cy.get("select").select("running");
   });
   it("location", () => {
@@ -27,10 +26,9 @@ describe("empty spec", () => {
     cy.get("textarea").type("I cannot imagine living and not running.");
   });
   it("date input", () => {
-      cy.get(".dateInput").click().type('2022-09-22')
+    cy.get(".dateInput").click().type("2022-09-22");
   });
   it("time start", () => {
-    cy.get(':nth-child(5) > .inputTime').click().type('2022-09-22T08:30')
-  })
+    cy.get(":nth-child(5) > .inputTime").click().type("2022-09-22T08:30");
+  });
 });
- 
