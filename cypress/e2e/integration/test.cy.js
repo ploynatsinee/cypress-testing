@@ -1,3 +1,5 @@
+import 'cypress-file-upload'
+
 describe("empty spec", () => {
   it("visit website", () => {
     cy.visit("https://fitfriends.vercel.app");
@@ -33,5 +35,18 @@ describe("empty spec", () => {
   });
   it("time end", () => {
     cy.get(":nth-child(6) > .inputTime").click().type("2022-09-22T09:55");
+  });
+  it("choose photo", () => {
+    // cy.get('.inputPhoto').click()
+    // cy.fixture("run.jpeg").then((fileContent) => {
+      // cy.get(".inputPhoto").first().upload(
+      //   { fileContent, fileName, mimeType: "image/jpeg" },
+      //   { subjectType: "drag-n-drop" }
+      // );
+      const yourFiturePath = "run";
+
+      cy.get(".inputPhoto").attachFile(yourFiturePath);
+      cy.get(".saveButton").click();
+    // });
   });
 });
