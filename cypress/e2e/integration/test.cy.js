@@ -27,7 +27,8 @@ describe("empty spec", () => {
     cy.get("textarea").type("I cannot imagine living and not running.");
   });
   it("date input", () => {
-    cy.get(".dateInput").click();
-    // cy.get(".input.dateInput > .input.dateInput-default").click();
+      cy.get(".dateInput").click().type('2022-09-22')
+      cy.wait(5000)
   });
 });
+ 
