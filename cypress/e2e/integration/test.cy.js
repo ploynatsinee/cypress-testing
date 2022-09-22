@@ -15,17 +15,23 @@ describe("empty spec", () => {
     cy.get(".Nav-ul > :nth-child(2) > a").wait(7000).click();
   });
   it("select sport", () => {
-    cy.intercept('/addpost', (req) => {
+    cy.intercept('/users/login', () => {
       cy.get("select").select("running");
     })
   });
   it("location", () => {
+    cy.intercept('/addpost', () => {
     cy.get(".locationInput").type("Bangkok");
+    })
   });
   it("caption", () => {
+    cy.intercept('/addpost', () => {
     cy.get("textarea").type("I cannot imagine living and not running.");
+    })
   });
   it("date input", () => {
+    cy.intercept('/addpost', () => {
     cy.get(".dateInput").click();
+    })
   });
 });
