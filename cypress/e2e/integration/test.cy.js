@@ -13,15 +13,21 @@ describe("empty spec", () => {
   it("click button signin", () => {
     Cypress.on('uncaught:exception', (err) => {
       cy.get("form > button").click();
-    cy.wait(9000);
+    // cy.wait(9000);
+    cy.intercept('/login').as('login')
     })
     
   });
   it("click add post", () => {
-    cy.get(".Nav-ul > :nth-child(2) > a").wait(9000).click();
+    
+    // cy.visit('/addpost')
+    cy.wait('@login').then((interception) => {
+      cy.get(".Nav-ul > :nth-child(2) > a").wait(9000).click();
+    })
   });
   it("select sport", () => {
     cy.wait(5000);
+    cy.intercept('/users/login')
     cy.get("select").select("running");
   });
   it("location", () => {
